@@ -4,6 +4,7 @@ html, body
   margin: 0
   padding: 0
   overflow-x: hidden
+  
 
 
 .statistics
@@ -450,58 +451,49 @@ html, body
 
 
 .partners
-  padding: 48px 0 36px 0
+  padding: 8px 0 36px 0
   background: #fff
   text-align: center
 
-  &__title
-    font-size: 1.6rem
+  h2
+    font-size: 36px
     font-weight: 700
     color: #124395
-    margin-bottom: 36px
+    font-weight: 700
+    margin-bottom: 35px
     letter-spacing: 0.02em
 
-  &__logos
-    display: flex
-    justify-content: center
-    align-items: center
-    gap: 48px
-    flex-wrap: wrap
+.partner-logos
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
 
-    .partner-logo
-      filter: grayscale(1) brightness(0.7)
-      opacity: 0.7
-      width: 120px
-      height: 60px
-      display: flex
-      align-items: center
-      justify-content: center
-      transition: filter 0.2s, opacity 0.2s, transform 0.2s
+  img
+    width: 240px
+    height: 120px
+    object-fit: contain
+    transition: filter 0.2s, opacity 0.2s, transform 0.2s
+    display: block
 
-      &:hover, &:focus
-        filter: grayscale(0) brightness(1)
-        opacity: 1
-        transform: scale(1.04)
+    &:hover, &:focus
+      filter: grayscale(0) brightness(1)
+      opacity: 1
+      transform: scale(1.04)
 
-@media (max-width: 900px)
-  .partners__logos
-    gap: 24px
 
-    .partner-logo
-      width: 90px
-      height: 44px
 
-@media (max-width: 600px)
+@media (max-width: 768px)
   .partners
     padding: 32px 0 24px 0
 
-  .partners__title
+  .partners h2
     font-size: 1.1rem
     margin-bottom: 18px
 
-  .partners__logos
+  .partner-logos
     gap: 14px
 
-    .partner-logo
-      width: 64px
-      height: 32px
+    img
+      width: 180px
+      height: 90px

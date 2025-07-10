@@ -7,33 +7,37 @@ html, body
 
 
 .newsletter
-  background: #0E3476
+  background: variables.$primary-color-700
   color: #fff
   display: flex
   justify-content: center
   align-items: center
   padding: 38px 0
-  gap: 48px
+  gap: 100px
 
   &__content
     display: flex
     flex-direction: column
     justify-content: center
     align-items: flex-start
+    margin-left: 10px
+    
 
     h3
       font-size: 1.18rem
       font-weight: 700
-      margin-bottom: 12px
+      margin-bottom: 6px
       color: #fff
 
     .newsletter__desc
       font-size: 0.96rem
-      color: #b7d2f8
-      margin-bottom: 0
+      color: #ffffff
+      margin: 0
+      margin-bottom: 16px
+      margin-top: 6px
 
       a
-        color: #70D4FF
+        color: variables.$secondary-color-300
         text-decoration: underline
         transition: color 0.18s
 
@@ -43,13 +47,16 @@ html, body
   &__form
     display: flex
     align-items: center
-    gap: 0
+    gap: 8px
+    margin-right: 10px
+
 
     .newsletter__input
-      padding: 0 18px
-      height: 44px
+      padding: 0 16px
+      height: 48px
+      width: 389px
       border: none
-      border-radius: 4px 0 0 4px
+      border-radius: 2px
       font-size: 1rem
       background: #fff
       color: #0E3476
@@ -57,16 +64,18 @@ html, body
       outline: none
 
       &::placeholder
-        color: #8ca5c7
+        color: #404040
+        font-size: 12px
+
 
     .newsletter__btn
-      height: 44px
+      height: 48px
       padding: 0 28px
       border: none
-      border-radius: 0 4px 4px 0
-      background: #779A19
-      color: #fff
-      font-size: 1rem
+      border-radius: 2px
+      background: variables.$secondary-color-700
+      color: #E6E6E6
+      font-size: 14px
       font-weight: 700
       cursor: pointer
       transition: background 0.18s
@@ -75,19 +84,29 @@ html, body
         background: #5c7c13
 
 // Responzivita pro menší obrazovky
-@media (max-width: 900px)
+@media (max-width: 1024px)
   .newsletter
     flex-direction: column
     align-items: stretch
     gap: 22px
     padding: 28px 0
+    margin: 0px
+
+    &__content
+      align-items: center
+
+    &__desc
+      text-align: center
+      margin: 0 auto
 
     &__form
-      justify-content: flex-start
+      justify-content: center
+      margin-bottom: 30px
 
-@media (max-width: 600px)
+@media (max-width: 767px)
   .newsletter
     padding: 18px 0
+    margin: 0px
 
     &__content
       h3
@@ -99,21 +118,28 @@ html, body
 
       .newsletter__input,
       .newsletter__btn
-        width: 100%
-        border-radius: 4px
-        margin-bottom: 8px
+        width: auto
+        margin-left: 20px
+        margin-right: 20px
 
       .newsletter__btn
         margin-bottom: 0
 
 
+
 //footer
 
 .footer
-  background: #0E3476
-  color: #fff
+  position: relative
+  background: variables.$primary-color-500
+  color: #E6E6E6
   padding: 48px 0 0 0
-  font-size: 1rem
+  font-size: 14px
+  font-style: normal
+  font-weight: 700
+  line-height: 36px
+  letter-spacing: 0px
+  line-spacing: 0px
 
   &__container
     display: flex
@@ -130,12 +156,16 @@ html, body
     flex: 1 1 220px
     min-width: 180px
     margin-bottom: 24px
+    
 
     h4
       font-size: 1.1rem
       font-weight: 700
       margin-bottom: 18px
-      color: #70D4FF
+      font-size: 20px
+      line-height: 28px
+      color: #E6E6E6
+      opacity: 1
 
     ul
       list-style: none
@@ -144,6 +174,7 @@ html, body
 
       li
         margin-bottom: 10px
+        opacity: 0.85
 
         a
           color: #fff
@@ -156,24 +187,41 @@ html, body
   &__contact
     .footer__company
       font-weight: 700
-      margin-bottom: 6px
 
     .footer__address
-      font-size: 0.98rem
-      margin-bottom: 12px
+      font-size: 14px
+      font-weight: 400
 
-      a
-        color: #70D4FF
-        text-decoration: underline
-        transition: color 0.18s
+      p
+        margin: 0
+        margin-bottom: 8px
 
-        &:hover, &:focus
-          color: #fff
+      .footer__email
+        color:#E6E6E6
+        font-weight: 700
+        line-height: 20px
+
+        .email
+          color: #E6E6E6
+          transition: color 0.18s
+          font-weight: 400
+
+          &:hover, &:focus
+            color: #fff
+
+        a
+          color: #E6E6E6
+          transition: color 0.18s
+          font-weight: 700
+
+          &:hover, &:focus
+            color: #fff
 
     .footer__social
       display: flex
       gap: 14px
-      margin-bottom: 14px
+      margin-bottom: 18px
+      margin-top:35px
 
       a
         color: #fff
@@ -186,26 +234,20 @@ html, body
     .footer__btn
       display: inline-block
       margin-top: 6px
-      padding: 10px 20px
+      padding: 10px 28px
       background: #779A19
       color: #fff
-      border-radius: 4px
-      font-weight: 600
+      border-radius: 2px
+      font-weight: 700
+      font-size: 12px
+      line-height: 16px
       text-decoration: none
       transition: background 0.18s
 
       &:hover, &:focus
         background: #5c7c13
 
-  &__logo
-    position: absolute
-    right: 32px
-    bottom: 12px
-    img
-      width: 72px
-      height: auto
-      opacity: 0.9
-
+  
   &__bottom
     background: #124395
     display: flex
@@ -215,12 +257,33 @@ html, body
     padding: 18px 32px
     font-size: 0.98rem
     margin-top: 32px
+    gap: 36px
+    max-width: 1400px
+    margin: 0 auto
+    padding: 28px 32px
+    position: relative
+
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: -1000px
+      width: 3000px // nebo 100vw
+      height: 1px
+      background: rgba(255, 255, 255, 0.10)
+
+    .bottom-left
+      display: flex
+      flex-direction: column
 
     a
-      color: #70D4FF
-      text-decoration: underline
+      color: #E6E6E6
       margin-right: 18px
       transition: color 0.18s
+      font-size: 12px
+      line-height: 16px
+      font-weight: 400
+      text-decoration: none
 
       &:hover, &:focus
         color: #fff
@@ -230,32 +293,36 @@ html, body
       color: #b7d2f8
       opacity: 0.8
 
+.footer__logo
+  position: absolute
+  inset: 4rem 0 auto auto;
+  top: 48px
+  right: 0   // 💡 místo left: 0
+  z-index: 10
+  height: auto
+  padding: 0
+  margin: 0
+
+  img
+    display: block
+    width: 100%
+    height: auto
+
 // Responzivita
 @media (max-width: 1100px)
   .footer__container
-    flex-direction: column
+    flex-direction: columns
     gap: 18px
     padding: 0 12px
 
   .footer__logo
-    position: static
-    margin: 24px auto 0 auto
-    display: flex
-    justify-content: center
+    opacity: 0.2
 
-@media (max-width: 700px)
-  .footer
-    padding: 32px 0 0 0
 
-  .footer__container
-    padding: 0 4px
+@media (max-width: 767px)
+  .footer__logo
+    opacity: 0.2
 
-  .footer__col
-    min-width: 0
-    margin-bottom: 18px
+ 
 
-  .footer__bottom
-    flex-direction: column
-    align-items: flex-start
-    gap: 8px
-    padding: 14px 8px
+  
