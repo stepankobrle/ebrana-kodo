@@ -13,30 +13,36 @@ html, body
   gap: 24px
   padding: 40px 0
   background: #fff
+  max-width: 1700px
+  margin: 0 auto
 
   .stat-item
-    background: #f8fafd
-    border: 1px dashed #c8d7e3
-    padding: 32px 24px
+    border-left: 3px solid #8DB2F1
+    padding: 32px 40px
+    padding-left: 80px
     text-align: left
-    border-radius: 8px
-    box-shadow: 0 2px 8px rgba(14,52,118,0.05)
 
     .stat-value
-      font-size: 2.2rem
+      font-size: 36px
       font-weight: 700
+      line-weight: 44px
       color: #124395
       margin-bottom: 8px
+      
 
     .stat-title
-      font-size: 1.25rem
-      font-weight: 600
-      color: #0E3476
+      font-size: 16px
+      font-weight: 700
+      line-weight: 18px
+      letter-spacing: 0
+      color: #007DB3
       margin-bottom: 8px
 
     .stat-desc
-      font-size: 1rem
-      color: #444
+      font-size: 14px
+      line-weight: 20px
+      color: #10100F
+      opacity: 0.8
 
 // Responzivita pro mobilní zařízení
 @media (max-width: 900px)
@@ -50,70 +56,75 @@ html, body
 
 
 .about-global
-  display: flex
-  align-items: flex-start
-  gap: 48px
-  padding: 48px 0
   background: #f8fafd
+  padding: 48px 0
 
-  &__content
-    flex: 1 1 50%
-    max-width: 520px
-    color: #10100F
-
-    h2
-      font-size: 2rem
-      font-weight: 700
-      color: #0E3476
-      margin-bottom: 18px
-
-    h3
-      font-size: 1.25rem
-      font-weight: 600
-      color: #124395
-      margin-top: 36px
-      margin-bottom: 12px
-
-    p
-      font-size: 1.05rem
-      line-height: 1.6
-      margin-bottom: 18px
-
-    strong
-      color: #70D4FF
-
-  &__map
-    flex: 1 1 50%
+  .about-global__position
+    max-width: 1400px
+    margin: 0 auto
     display: flex
-    justify-content: center
-    align-items: center
+    align-items: flex-start
+    gap: 48px
 
-    img
-      max-width: 100%
-      height: auto
-      display: block
+    .about-global__content
+      flex: 1 1 50%
+      max-width: 513px
+      color: #10100F
 
-// Responzivita pro menší obrazovky
-@media (max-width: 900px)
-  .about-global
-    flex-direction: column
-    gap: 32px
-    padding: 32px 0
+      h2
+        font-size: 36px
+        font-weight: 700
+        color: #124395
+        margin-bottom: 18px
 
-    &__content, &__map
-      max-width: 100%
-      flex: 1 1 100%
+      h3
+        font-size: 28px
+        font-weight: 600
+        color: #124395
+        margin-top: 36px
+        margin-bottom: 12px
+
+      p
+        font-size: 18px
+        line-height: 28px
+        margin-bottom: 18px
+
+      strong
+        color: #10100F
+
+    .about-global__map
+      flex: 1 1 50%
+      display: flex
+      justify-content: center
+      align-items: center
+
+      img
+        max-width: 100%
+        height: auto
+        display: block
+
+  // Responzivita pro menší obrazovky
+  @media (max-width: 900px)
+    .about-global
+      flex-direction: column
+      gap: 32px
+      padding: 32px 0
+
+      &__content, &__map
+        max-width: 100%
+        flex: 1 1 100%
 
 
 
 //references
 
 .references
-  background: #f8fafd
   border-radius: 12px
-  box-shadow: 0 2px 8px rgba(14,52,118,0.05)
   padding: 40px 32px
+  padding-top: 96px 
   margin: 32px 0
+  max-width: 1400px
+  margin: 0 auto
 
   &__header
     margin-bottom: 18px
@@ -143,16 +154,16 @@ html, body
       align-items: center
 
       .btn
-        padding: 14px 32px
-        font-size: 1.08rem
-        font-weight: 600
-        border-radius: 6px
+        padding: 14px 40px
+        font-size: 14px
+        font-weight: 700
+        border-radius: 2px
+        color: #fff
         text-decoration: none
         transition: background 0.2s, color 0.2s
 
       .btn--green
         background: #779A19
-        color: #fff
         border: none
 
         &:hover, &:focus
@@ -172,6 +183,7 @@ html, body
       .references__button
         width: 100%
         justify-content: flex-start
+        border-radius: 2px
 
 //refence gallery
 
@@ -180,13 +192,14 @@ html, body
   gap: 32px
   justify-content: center
   margin: 40px 0
+  padding-bottom: 128px
 
   .reference-card
     background: #fff
-    border-radius: 10px
+    border-radius: 4px
     box-shadow: 0 2px 8px rgba(14,52,118,0.07)
     overflow: hidden
-    width: 340px
+    width: 448px
     display: flex
     flex-direction: column
     align-items: stretch
@@ -197,25 +210,32 @@ html, body
 
     &__img
       width: 100%
-      height: 190px
+      height: 272px
       object-fit: cover
       display: block
 
     &__body
-      padding: 20px 18px
+      padding: 48px 40px
+      padding-top: 32px
       display: flex
       flex-direction: column
+      align-items: center
       gap: 10px
+      max-width: 1400px
 
     &__title
-      font-size: 1.15rem
-      font-weight: 700
-      color: #0E3476
-      margin-bottom: 8px
+      font-size: 18px
+      margin: 0
+      line-weight: 24px
+      font-weight: 500
+      color: #124395
 
     &__meta
-      font-size: 1rem
-      color: #444
+      font-size: 14px
+      font_weight: 400
+      line-height: 20px
+      text-align: center
+      color: #10100F
 
 @media (max-width: 1100px)
   .references-gallery
@@ -237,88 +257,117 @@ html, body
 
 
 .events
-  background: #0E3476
+  background: variables.$primary-color-500
   color: #fff
   padding: 40px 0
 
-  h2
-    font-size: 2.1rem
-    font-weight: 700
-    margin-bottom: 10px
-
-  &__subtitle
-    font-size: 1.08rem
-    margin-bottom: 20px
-    color: #c7d6ee
-
-  &__actions
+  .events__subtitle__position
     display: flex
-    justify-content: flex-end
-    margin-bottom: 30px
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-end
+    margin-bottom: 28px
+    max-width: 1400px
+    margin: 0 auto 
+    margin-bottom: 38px
 
-    .events__all-btn
-      display: inline-block
-      padding: 10px 30px
-      border: 2px solid #fff
-      border-radius: 4px
-      color: #fff
-      background: transparent
-      font-weight: 600
-      font-size: 1rem
-      text-decoration: none
-      transition: background 0.2s, color 0.2s
+    .events__subtitle__column
+      flex-direction: column
+      text-align: flex-end
 
-      &:hover, &:focus
-        background: #fff
-        color: #0E3476
+      h2
+        font-size: 2.1rem
+        font-weight: 700
+        margin-bottom: 10px
+        max-width: 1400px
+
+      .events__subtitle
+        font-size: 16px
+        font-weight: 400
+        color: #c7d6ee
+
+    .events__actions
+      display: flex
+      justify-content: flex-end
+      margin-bottom: 30px
+
+      .events__all-btn
+        display: inline-block
+        padding: 10px 30px
+        border: 2px solid #fff
+        border-radius: 2px
+        color: #fff
+        background: transparent
+        font-weight: 600
+        font-size: 1rem
+        text-decoration: none
+        transition: background 0.2s, color 0.2s
+
+        &:hover, &:focus
+          background: #fff
+          color: #0E3476
 
   &__list
     display: flex
     gap: 28px
     justify-content: center
     flex-wrap: wrap
+    max-width: 1400px
+    margin: 0 auto 
 
     .event-card
-      background: #124395
-      border-radius: 12px
+      background: #0E3476
+      border-radius: 4px
       box-shadow: 0 2px 12px rgba(14,52,118,0.08)
-      padding: 32px 28px
-      width: 340px
+      width: 448px
+      height: 284px
       display: flex
       flex-direction: column
       align-items: flex-start
       position: relative
       transition: box-shadow 0.2s
+      padding-bottom: 25px
 
       &:hover
         box-shadow: 0 6px 24px rgba(14,52,118,0.18)
 
       &__title
-        font-size: 1.18rem
+        font-size: 20px
         font-weight: 700
         margin-bottom: 18px
         color: #fff
+        padding: 48px
+        padding-bottom: 15px
 
       &__info
-        font-size: 1rem
-        margin-bottom: 20px
-        color: #d5e8ff
+        font-size: 14px
+        padding: 48px
+        padding-top: 0
+        padding-bottom: 0
+        color: #fff
         display: flex
         flex-direction: column
         gap: 4px
+        font-weight: 700
 
         i
           margin-right: 8px
           color: #70D4FF
+          
+
+        .event-card__place
+          margin-left: 25px
+          font-weight: 500
 
       &__btn
-        margin-top: auto
-        padding: 12px 28px
-        background: #779A19
+        margin-top: 20px
+        margin-left: 48px
+        padding: 10px 28px
+        background: variables.$secondary-color-700
         color: #fff
         border: none
-        border-radius: 6px
-        font-size: 1rem
+        border-radius: 4px
+        font-size: 12px
         font-weight: 700
         text-decoration: none
         cursor: pointer
@@ -328,13 +377,18 @@ html, body
           background: #5c7c13
 
 // Responzivita pro menší obrazovky
-@media (max-width: 1100px)
-  .events__list
-    gap: 16px
+@media (max-width: 860px)
+  .events__subtitle__position
+    display: flex
+    justify-content: center
+    
+    .events__list
+      gap: 16px
+      width: 100%
 
-    .event-card
-      width: 90vw
-      max-width: 400px
+      .event-card
+        width: 90vw
+        max-width: 400px
 
 @media (max-width: 700px)
   .events__list
@@ -350,27 +404,32 @@ html, body
 .news
   background: #f8fafd
   padding: 48px 0
+  padding-bottom: 130px
+  
 
   &__header
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 28px
+    max-width: 1400px
+    margin: 38px auto
 
     h2
-      font-size: 2rem
+      font-size: 36px
       font-weight: 700
-      color: #0E3476
+      color: #124395
+      line-height: 44px
       margin: 0
 
     .news__all-btn
-      padding: 10px 28px
-      border: 2px solid #0E3476
-      border-radius: 4px
-      background: transparent
-      color: #0E3476
+      padding: 14px 40px
+      border-radius: 2px
+      background: variables.$secondary-color-700
+      color: #FFFFFF
       font-weight: 600
-      font-size: 1rem
+      font-size: 14px
+      line-height: 16px
       text-decoration: none
       transition: background 0.2s, color 0.2s
 
@@ -380,16 +439,18 @@ html, body
 
   &__list
     display: flex
-    gap: 32px
+    gap: 28px
     justify-content: center
     flex-wrap: wrap
+    max-width: 1400px
+    margin: 0 auto
 
     .news__item
       background: #fff
-      border-radius: 10px
+      border-radius: 4px 4px 0px 0px
       box-shadow: 0 2px 8px rgba(14,52,118,0.07)
       overflow: hidden
-      width: 350px
+      width: 448px
       display: flex
       flex-direction: column
       align-items: stretch
@@ -400,20 +461,20 @@ html, body
 
       .news__img
         width: 100%
-        height: 180px
+        height: 272px
         object-fit: cover
         display: block
 
       .news__content
-        padding: 20px 18px
+        padding: 20px 48px
         display: flex
         flex-direction: column
         gap: 10px
 
         .news__title
-          font-size: 1.13rem
-          font-weight: 700
-          color: #0E3476
+          font-size: 18px
+          font-weight: 500
+          color: #124395
           margin-bottom: 10px
 
         .news__meta
@@ -432,7 +493,25 @@ html, body
           &:hover, &:focus
             color: #5c7c13
 
-@media (max-width: 1000px)
+@media (max-width: 1400px)
+  .news__header
+      display: flex
+      flex-direction: column
+      margin: 16px
+
+  .news__list
+    gap: 16px
+    margin: 16px
+
+    .news__item
+      width: 95vw
+      max-width: 420px
+
+@media (max-width: 1023px)
+  .news__header
+    margin:16px
+    margin-bottom: 36px
+
   .news__list
     gap: 16px
 
@@ -440,7 +519,11 @@ html, body
       width: 95vw
       max-width: 420px
 
-@media (max-width: 700px)
+@media (max-width: 767px)
+  .news__header
+    display: flex
+    flex-direction: column
+
   .news__list
     flex-direction: column
     align-items: center
