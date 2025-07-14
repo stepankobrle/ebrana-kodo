@@ -15,7 +15,7 @@
   <div class="top-bar">
 
   <div class="top-bar-left">
-    <img src="logo.svg" alt="Envi-pur logo" />
+    <img src="foto/logo.png" alt="Envi-pur logo" />
   </div>
 
   <div class="top-bar-right">
@@ -29,15 +29,16 @@
     </nav>
 
     <div class="icons">
-      <a href="#"><img src="ig.svg" alt="Instagram" /></a>
-      <a href="#"><img src="fb.svg" alt="Facebook" /></a>
-      <a href="#"><img src="in.svg" alt="LinkedIn" /></a>
-      <a href="#"><img src="yt.svg" alt="YouTube" /></a>
+      <a href="#"><img src="foto/instagram.svg" alt="Instagram" /></a>
+      <a href="#"><img src="foto/facebook.svg" alt="Facebook" /></a>
+      <a href="#"><img src="foto/linkedin.svg" alt="LinkedIn" /></a>
+      <a href="#"><img src="foto/youtube.svg" alt="YouTube" /></a>
     </div>
 
     <div class="lang">
+      <img src="foto/CZ - Czech Republic.png" alt="Česká vlajka">
       <select>
-        <option value="cs">Česky</option>
+        <option value="cs">Čeština</option>
         <option value="en">English</option>
       </select>
     </div>
@@ -48,7 +49,7 @@
 
   <div class="main-nav">
     <nav class="nav-menu">
-      <a href="#"><img src="home.svg" alt="Home" /></a>
+      <a href="#"><img src="foto/home.png" alt="Home" /></a>
       <a href="#">Pro domácnosti</a>
       <a href="#">Pro firmy</a>
       <a href="#">Pro průmysl</a>
@@ -57,38 +58,91 @@
         <a href="#">Všechny produkty a služby ▼</a>
       </div>
       <a href="#">Kontakty</a>
-      <button class="search"><img src="search.svg" alt="Hledat" /></button>
+      <button class="search"><img src="foto/Icon.png" alt="Hledat" /></button>
     </nav>
     <div class="right-buttons">
       <button class="btn blue">E-shop</button>
       <button class="btn green">Servis a reklamace</button>
     </div>
   </div>
+
+  <div class="mobile-bar">
+    <img src="foto/logo.png" alt="Envi-pur logo" class="logo" />
+    <div class="mobile-header-position">
+      <button class="search"><img src="foto/Icon.png" alt="Hledat" /></button>
+      <button class="hamburger" aria-label="Menu">
+        <span></span>
+  <span></span>
+  <span></span>
+    </div>
+    </button>
+  </div>
+
+  <!-- Skrytý obsah pro mobil, viditelný v hamburger menu -->
+  <nav class="mobile-menu">
+    <div class="top-links">
+      <a href="#">Reference</a>
+      <a href="#">Pro projektanty</a>
+      <a href="#">O nás</a>
+      <a href="#">Kariéra</a>
+      <a href="#">Kalendář akcí</a>
+      <a href="#">Novinky</a>
+    </div>
+    <div class="icons">
+      <a href="#"><img src="foto/instagram.svg" alt="Instagram" /></a>
+      <a href="#"><img src="foto/facebook.svg" alt="Facebook" /></a>
+      <a href="#"><img src="foto/linkedin.svg" alt="LinkedIn" /></a>
+      <a href="#"><img src="foto/youtube.svg" alt="YouTube" /></a>
+    </div>
+    <div class="lang">
+      <img src="foto/CZ - Czech Republic.png" alt="Česká vlajka">
+      <select>
+        <option value="cs">Čeština</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    <div class="nav-menu">
+      <a href="#"><img src="foto/home.png" alt="Home" /></a>
+      <a href="#">Pro domácnosti</a>
+      <a href="#">Pro firmy</a>
+      <a href="#">Pro průmysl</a>
+      <a href="#">Pro města a obce</a>
+      <div class="dropdown">
+        <a href="#">Všechny produkty a služby ▼</a>
+      </div>
+      <a href="#">Kontakty</a>
+    </div>
+    <div class="right-buttons">
+      <button class="btn blue">E-shop</button>
+      <button class="btn green">Servis a reklamace</button>
+    </div>
+  </nav>
+
 </header>
 
 
   <!-- Hlavní banner -->
   <section class="hero">
   <h1>Dáváme vodě nový život.</h1>
-  <div class="hero-links">
-    <a href="#">
-      <span class="icon"><i class="fa-solid fa-house-chimney"></i></span>
-      <span>Domácnosti, chaty a chalupy</span>
-    </a>
-    <a href="#">
-      <span class="icon"><i class="fa-solid fa-building"></i></span>
-      <span>Firmy a ubytovací zařízení</span>
-    </a>
-    <a href="#">
-      <span class="icon"><i class="fa-solid fa-city"></i></span>
-      <span>Města a obce</span>
-    </a>
-    <a href="#">
-      <span class="icon"><i class="fa-solid fa-industry"></i></span>
-      <span>Průmysl</span>
-    </a>
-  </div>
 </section>
+<div class="hero-links">
+  <a href="#">
+    <img src="foto/dalsibarak.png" alt="Domácnosti, chaty a chalupy" class="hero-photo">
+    <span>Domácnosti, chaty a chalupy</span>
+  </a>
+  <a href="#">
+    <img src="foto/banerdum.png" alt="Firmy a ubytovací zařízení" class="hero-photo">
+    <span>Firmy a ubytovací zařízení</span>
+  </a>
+  <a href="#">
+    <img src="foto/barak.png" alt="Města a obce" class="hero-photo">
+    <span>Města a obce</span>
+  </a>
+  <a href="#">
+    <img src="foto/cernobyl.png" alt="Průmysl" class="hero-photo">
+    <span>Průmysl</span>
+  </a>
+</div>
 
   <!-- Statistiky / Výhody -->
   <section class="statistics">
@@ -396,6 +450,12 @@
 </div>
 
 </footer>
+
+<script>
+  document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.top-header').classList.toggle('menu-open');
+  });
+</script>
 
 </body>
 </html>
