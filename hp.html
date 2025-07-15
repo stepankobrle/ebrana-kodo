@@ -459,8 +459,12 @@
 </footer>
 
 <script>
-  document.querySelector('.hamburger').addEventListener('click', function() {
-    document.querySelector('.top-header').classList.toggle('menu-open');
+  const hamburger = document.querySelector('.hamburger');
+  const topHeader = document.querySelector('.top-header');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = topHeader.classList.toggle('menu-open');
+    document.body.classList.toggle('menu-open', isOpen);
   });
 </script>
 

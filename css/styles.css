@@ -343,8 +343,20 @@ header .main-nav .right-buttons .btn.green {
   .top-header .mobile-menu {
     display: none;
   }
+  .top-header.menu-open .mobile-bar {
+    position: fixed;
+    left: 0;
+    width: 92%;
+    z-index: 9999;
+  }
   .top-header.menu-open .mobile-menu {
     display: flex;
+    overflow: hidden;
+    position: fixed;
+    padding-top: 40px;
+    width: 100% s;
+    height: 100vh;
+    z-index: 9998;
   }
   .top-header .top-bar, .top-header .main-nav {
     display: none;
