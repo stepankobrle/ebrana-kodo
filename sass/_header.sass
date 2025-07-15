@@ -165,7 +165,7 @@ header
     background: #fff
 
     .logo
-      height: 40px
+      height: 25px
 
     .mobile-header-position
       display: flex
@@ -182,23 +182,65 @@ header
           width: 18px
           height: 18px
 
+      .lang
+        position: relative
+        display: flex
+        align-items: center
+        gap: 0
+        width: fit-content
+        padding: 3px 6px
+        background: #FFFFFF
+        cursor: pointer
+
+        .lang-flag
+          width: 20px
+          height: 10px
+          border-radius: 2px
+          object-fit: cover
+          display: block
+
+        .lang-chevron
+          margin-left: 4px
+          width: 10px
+          height: 10px
+          pointer-events: none
+
+        select
+          position: absolute
+          color: black
+          inset: 0
+          opacity: 0
+          width: 100%
+          height: 100%
+          cursor: pointer
+          border: none
+          background: none
+          appearance: none
+
+        // Skrýt text a šipku ve všech moderních prohlížečích
+        select option
+          padding: 12px 12px
+          border-radius: 2px
+
+        &:hover, &:focus-within
+          box-shadow: 0 0 0 2px #b5c9e2
 
       .hamburger
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        width: 40px
-        height: 40px
+        width: 30px
+        height: 30px
         background: none
         border: none
         cursor: pointer
 
         span
           display: block
-          width: 28px
-          height: 2px
-          margin: 4px 0
+          width: 24px
+          height: 3px
+          margin: 2.6px 0
           background: #124395
           border-radius: 2px
 
@@ -207,15 +249,71 @@ header
     flex-direction: column
     background: #fff
     position: absolute
-    top: 60px
     left: 0
     width: 100vw
     z-index: 1000
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08)
     padding: 1rem 0
 
-    .top-links, .icons, .lang, .nav-menu, .right-buttons
+    .lang, .nav-menu
+      display: flex
+      flex-direction: column
       margin: 0.5rem 1rem
+
+      a
+        text-decoration: none
+        color: black
+        font-size: 16px
+        font-weight: 500
+        line-weight: 20px
+        padding: 5px 0
+        border-top: 0.5px solid #E3EAF3;
+
+    
+    .top-links
+      display: flex
+      flex-wrap: wrap
+      padding-top: 15px
+      justify-content: center
+      
+      a
+        text-decoration: none
+        color: black
+        font-size: 14px
+        font-weight: 500
+        line-weight: 20px
+        padding: 5px 16px
+
+    .icons
+      display: flex
+      gap: 10px
+      padding-top: 25px
+      justify-content: center
+
+    .right-buttons
+      display: flex
+      gap: 0.5rem
+      padding: 0 16px
+      justify-content: center
+      flex-wrap: wrap
+
+      .btn
+        padding: 14px 40px
+        border: none
+        color: variables.$basic-color
+        font-weight: 700
+        font-size: 14px
+        line-height: 16px
+        border-radius: 2px
+        cursor: pointer
+        font-size: 0.9rem
+
+        &.blue
+          background: variables.$primary-color-500
+
+        &.green
+          background: variables.$secondary-color-700
+
+
 
 
 @media (max-width: 1500px)
@@ -266,6 +364,10 @@ header
 
     .top-bar, .main-nav
       display: none
+
+      .top-bar-right .lang
+        display: flex
+
 
 @media (min-width: 1160px)
   .top-header
@@ -340,6 +442,8 @@ header
 
 
 @media (max-width: 1362px)
+  .hero h1
+      font-size: 60px
   .hero-links
     margin-top: -400px
     align-items: center
@@ -351,17 +455,33 @@ header
 
 @media (max-width: 1162px)
   .hero
-    height: calc(100vh - 56px)
+    height: calc(100vh - 45px)
 
   .hero-links
-    margin-top: 45px
+    margin-top: -414px
     align-items: center
 
     a
       background: rgba(16, 16, 15, 0.90)
       width: 100%
-      height: 120px
+      height: 65px
       max-width: 100%
       justify-content: center
 
 
+@media (max-width: 780px)
+  .hero h1
+        font-size: 45px
+        padding: 160px 16px
+
+  .hero-links
+    margin-top: 45px
+    margin-bottom: 10px
+    align-items: center
+
+    a
+      background: rgba(16, 16, 15, 0.90)
+      width: 100%
+      height: 90px
+      max-width: 100%
+      justify-content: center
