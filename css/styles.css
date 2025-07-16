@@ -440,11 +440,12 @@ header .main-nav .right-buttons .btn.green {
     font-size: 60px;
   }
   .hero-links {
-    margin-top: -400px;
+    margin-top: 45px;
     align-items: center;
   }
   .hero-links a {
     max-width: 100%;
+    height: 100px;
     justify-content: center;
   }
 }
@@ -453,7 +454,6 @@ header .main-nav .right-buttons .btn.green {
     height: calc(100vh - 45px);
   }
   .hero-links {
-    margin-top: -414px;
     align-items: center;
   }
   .hero-links a {
